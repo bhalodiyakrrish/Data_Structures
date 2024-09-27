@@ -1,0 +1,22 @@
+class Solution:
+    def checkDistinct(self, A):
+      res = len(set(A)) == len(A) 
+      if res:
+            return "Distinct"
+      return "Not Distinct"
+def main():
+    t = int(input())
+    while(t > 0):
+        a=tuple(map(int,input().split()))
+        ob = Solution()
+        res = ob.checkDistinct(a)
+        print(res)
+        t-=1
+if __name__ == "__main__": 
+    main()
+
+
+# Input: 
+# 1 2 3 4 5 4
+# Output: 
+# Not Distinct
