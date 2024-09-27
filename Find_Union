@@ -1,0 +1,26 @@
+class Solution:
+    def Union(self, A, B):     
+        A = set(A)
+        B = set(B)
+        return A | B
+def main():
+    t = int(input())
+    while(t > 0):
+        a=list(map(int,input().split()))
+        b=list(map(int,input().split()))
+        a=set(a);b=set(b);
+        ob = Solution()
+        res = ob.Union(a,b)
+        for i in res:
+            print(i,end = " ")
+        print()
+        t-=1
+if __name__ == "__main__": 
+    main()
+
+
+# Input: 
+# 2 5 6
+# 1 4 3 2
+# Output:
+# 1 2 3 4 5 6
