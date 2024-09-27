@@ -1,0 +1,22 @@
+class Solution:
+    def Index(self, A, X):
+        A = tuple(A)
+        return (A.index(X))
+def main():
+    t = int(input())
+    while(t > 0):
+        A=tuple(map(int,input().split()))
+        X = int(input())
+        ob = Solution()
+        res = ob.Index(A,X)
+        print(res)
+        t-=1
+if __name__ == "__main__": 
+    main()
+
+
+# Input: 
+# 1 2 3 4 5
+# 3
+# Output: 
+# 2
