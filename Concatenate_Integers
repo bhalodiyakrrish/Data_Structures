@@ -1,0 +1,19 @@
+def utility():
+    a=int(input())
+    b=int(input())
+    ans= str(a)+str(b)
+    print(ans)
+def main():
+    t=int(input())
+    while(t>0):
+        utility()
+        t-=1
+if __name__ == "__main__": 
+    main()
+
+
+# Input: 
+# 5
+# 6
+# Output: 
+# 56
