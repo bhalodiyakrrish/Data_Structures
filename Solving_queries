@@ -1,0 +1,29 @@
+class Solution:
+    def Query(self, dict, query):        
+        query = list(query)
+        for i in query :
+            print(dict.get(i))
+def main():
+    t = int(input())
+    while(t > 0):
+        a = list(map(int,input().split()))
+        b = list(map(str,input().split()))
+        query = list(map(int,input().split()))
+        dict = {}
+        for i in range(len(a)):
+            dict[a[i]] = b[i]
+        ob = Solution()
+        res = ob.Query(dict,query)
+        t-=1
+if __name__ == "__main__": 
+    main()
+
+
+# Input: 
+# 1 2 3
+# abc def ghi
+# 2 3 4
+# Output: 
+# def
+# ghi
+# None
