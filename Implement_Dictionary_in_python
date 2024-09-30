@@ -1,0 +1,43 @@
+def insert_dict(key, value, Dict):
+    Dict[key] = int(value)
+    print("Inserted")
+def del_dict(key, Dict):
+    if key in Dict:
+        del Dict[key]
+        print("Deleted")
+    else:
+        print('-1')
+def print_dict(key, Dict):
+    if (key in Dict):
+        print("Marks of " + key + " is " + str(Dict[key]))
+    else:
+        print("-1")
+def main():
+    for _ in range(int(input())):
+        Q = int(input())
+        Dict = {}
+        for i in range(Q):
+            query = input().split()
+            if(query[0] == 'i'):
+                insert_dict(query[1], query[2], Dict)
+            elif(query[0] == 'd'):
+                del_dict(query[1], Dict)    
+            else:
+                print_dict(query[1], Dict)
+if __name__ == '__main__':
+    main()
+
+
+# Input: 
+# 5
+# i geeks 100
+# i for 200
+# d geeks
+# i geeks 300
+# p geeks
+# Output: 
+# Inserted
+# Inserted
+# Deleted
+# Inserted
+# Marks of geeks is 300
